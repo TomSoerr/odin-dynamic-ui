@@ -1,0 +1,104 @@
+/* IMAGE SLIDER */
+
+#image-slider-container {
+  position: relative;
+  width: 90vw;
+  height: 50.5vw;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  background-color: var(--cultured);
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in;
+}
+
+#image-slider {
+  display: grid;
+  grid-template-columns: 1fr repeat(5, auto) 1fr;
+  gap: 0.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+#image-slider-forward,
+#image-slider-backward {
+  height: 100%;
+  width: 2vw;
+  background-color: var(--sonic-silver);
+  cursor: pointer;
+}
+
+#image-slider-backward {
+  justify-self: start;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#image-slider-forward {
+  justify-self: end;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.image-slider-image {
+  position: relative;
+  height: 5vw;
+  width: 8.8vw;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.image-slider-image::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.8rem;
+  width: 0.8rem;
+  border: 1px solid var(--sonic-silver);
+  border-radius: 50%;
+  transform: translate(calc(4.4vw - 50% - 1px), 1rem);
+  cursor: pointer;
+  transition: background-color 1s ease-in;
+}
+
+.image-slider-image.selected::before {
+  background-color: var(--sonic-silver);
+  transition: background-color 1s ease-in;
+}
+
+/* IMAGES */
+/* 
+ * images are added as background images to have a default size
+ * to get an image on the #image-slider a class must be added to the slider
+ */
+
+#image-slider-image-1,
+#image-slider-container.image-1 {
+  background-image: url('./img/img1.jpg');
+}
+
+#image-slider-image-2,
+#image-slider-container.image-2 {
+  background-image: url('./img/img2.jpg');
+}
+
+#image-slider-image-3,
+#image-slider-container.image-3 {
+  background-image: url('./img/img3.jpg');
+}
+
+#image-slider-image-4,
+#image-slider-container.image-4 {
+  background-image: url('./img/img4.jpg');
+}
+
+#image-slider-image-5,
+#image-slider-container.image-5 {
+  background-image: url('./img/img5.jpg');
+}

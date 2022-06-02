@@ -1,0 +1,46 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --cultured: #f8f9faff;
+  --cultured-2: #e9ecefff;
+  --gainsboro: #dee2e6ff;
+  --light-gray: #ced4daff;
+  --cadet-blue-crayola: #adb5bdff;
+  --sonic-silver: #6c757dff;
+  --davys-grey: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+  --font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --focus-color: #89d9fb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  color: var(--onyx);
+  background-color: var(--cultured-2);
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-family);
+  background-color: var(--cultured);
+  color: var(--onyx);
+  border-bottom: thin solid var(--gainsboro);
+}
+
+#header h1 {
+  margin: 0;
+  margin-right: auto;
+  font-weight: 100;
+}

@@ -1,0 +1,35 @@
+/* DROP DOWN */
+
+#drop-down-box {
+  position: relative;
+  font-weight: 100;
+  font-size: large;
+  padding: 0.5rem;
+  width: 7rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+#drop-down-options {
+  display: grid;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  left: 0;
+  width: 7rem;
+  z-index: 1;
+  background-color: var(--cultured);
+}
+
+#drop-down-options.hidden {
+  display: none;
+}
+
+#drop-down-options span {
+  padding: 0.5rem;
+  border-bottom: thin solid var(--gainsboro);
+}
+
+#drop-down-options span:first-child {
+  border-top: thin solid var(--gainsboro);
+}

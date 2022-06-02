@@ -1,0 +1,33 @@
+#mobile-menu-box {
+  display: none; 
+}
+
+@media only screen and (max-width: 600px) {
+  #header #drop-down-box {
+    display: none;
+  }
+
+  #mobile-menu-box {
+    display: grid;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    background-color: var(--cultured);
+    font-weight: 200;
+    border-top: thin solid var(--gainsboro, black);
+  }
+
+  #mobile-menu-box span {
+    padding: 0.5rem 1rem;
+    border-left: thin solid var(--gainsboro);
+    cursor: pointer;
+  }
+
+  #mobile-menu-box span:first-child {
+    border: 0;
+  }
+}
